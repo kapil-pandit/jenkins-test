@@ -1,25 +1,26 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
 // Define a route for GET requests
-app.get('/api', (req, res) => {
-    res.json({ message: 'Hello, world!' });
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello, world!" });
 });
 
-app.get('/api/test', (req, res) => {
-    res.json({ message: 'test api' });
+app.get("/api/test", (req, res) => {
+  res.json({ message: "test api" });
 });
 
-app.get('/api/public', (req, res) => {
-    res.json({ message: 'public api' });
+app.get("/api/public", (req, res) => {
+  res.json({ message: "public api" });
 });
 
-
-
+app.get("/api/loda", (req, res) => {
+    res.json({ message: "loda api" });
+  });
 
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+  console.log(`Server running at http://localhost:${port}/`);
 });
