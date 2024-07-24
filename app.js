@@ -7,9 +7,9 @@ app.get('/api', (req, res) => {
     res.json({ message: 'Hello, world!' });
 });
 
-// app.get('/api/test', (req, res) => {
-//     res.json({ message: 'test api' });
-// });
+app.get('/api/test', (req, res) => {
+    res.json({ message: 'test api' });
+});
 
 
 
