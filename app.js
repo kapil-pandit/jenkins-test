@@ -15,9 +15,9 @@ app.get("/api/public", (req, res) => {
   res.json({ message: "public api" });
 });
 
-// app.get("/api/loda", (req, res) => {
-//     res.json({ message: "loda api" });
-//   });
+app.get("/api/loda", (req, res) => {
+    res.json({ message: "loda api" });
+  });
 
 
 // Start the server
