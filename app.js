@@ -15,9 +15,7 @@ app.get('/api/public', (req, res) => {
     res.json({ message: 'public api' });
 });
 
-app.get('/api/public-test', (req, res) => {
-    res.json({ message: 'public api' });
-});
+
 
 // Start the server
 app.listen(port, () => {
