@@ -11,9 +11,6 @@ app.get('/api/test', (req, res) => {
     res.json({ message: 'test api' });
 });
 
-app.get('/api/public', (req, res) => {
-    res.json({ message: 'public api' });
-});
 
 
 
