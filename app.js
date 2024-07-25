@@ -34,7 +34,7 @@ app.get('/api/homepage', (req, res) => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Image FileFileFileFileFileFile Example </title>
+        <title>Image File Example </title>
       </head>
       <body>
         <h1>Image ExampleExampleExampleExampleExample</h1>
