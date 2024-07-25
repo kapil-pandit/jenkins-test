@@ -23,7 +23,7 @@ app.get('/api/homepage', (req, res) => {
   fs.readFile(imagePath, (err, imageData) => {
     if (err) {
       console.error('Error reading image file:', err);
-      res.status(500).send('Internal Server Error');
+      res.status(500).send('Internal  Server Error');
       return;
     }
 
