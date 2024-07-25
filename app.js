@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-
+const fs = require('fs');
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')));
 // Define a route for GET requests
 app.get("/api", (req, res) => {
   res.json({ message: "Hello, world!" });
@@ -15,13 +17,38 @@ app.get("/api/public", (req, res) => {
   res.json({ message: "public api" });
 });
 
-app.get("/api/loda", (req, res) => {
-    res.json({ message: "loda api" });
-  });
+app.get('/api/homepage', (req, res) => {
+  // Read the image file asynchronously
+  const imagePath = path.join(__dirname, 'public', 'image.jpg');
+  fs.readFile(imagePath, (err, imageData) => {
+    if (err) {
+      console.error('Error reading image file:', err);
+      res.status(500).send('Internal Server Error');
+      return;
+    }
 
-  app.get("/api/chut", (req, res) => {
-    res.json({ message: "chut api" });
+    // Construct the HTML content with the image
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Example</title>
+      </head>
+      <body>
+        <h1>Image Example</h1>
+        <img src="https://r.mobirisesite.com/584444/assets/images/photo-1467685790346-20bfe73a81f0.jpeg">
+      </body>
+      </html>
+    `;
+
+    // Send the HTML content as response
+    res.send(htmlContent);
   });
+});
+
+
 
 
 // Start the server
