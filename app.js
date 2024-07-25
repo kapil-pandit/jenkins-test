@@ -19,6 +19,10 @@ app.get("/api/loda", (req, res) => {
     res.json({ message: "loda api" });
   });
 
+  app.get("/api/chut", (req, res) => {
+    res.json({ message: "chut api" });
+  });
+
 
 // Start the server
 app.listen(port, () => {
