@@ -37,7 +37,7 @@ app.get('/api/homepage', (req, res) => {
         <title>Image FileFileFileFileFileFile Example </title>
       </head>
       <body>
-        <h1>Image Example</h1>
+        <h1>Image ExampleExampleExampleExampleExample</h1>
         <img src="https://r.mobirisesite.com/584444/assets/images/photo-1467685790346-20bfe73a81f0.jpeg">
       </body>
       </html>
